@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+th:text : 텍스트를 출력하는 기능, 태그안에서만 사용 가능
+
+<Unescape>
+th:utext, [( ... )] 로 변경하여 사용
+
+escape 를 기본으로 하고 unescape는 필요할 때마다 사용 -> escape를 사용하지 않아서 정상 렌더링이 되지 않는
+수 많은 문제가 실무에서 발생하기 때문
+-->
+<h1>컨텐츠에 데이터 출력하기</h1>
+<ul>
+    <li>th:text 사용 <span th:text="${data}"></span></li>
+    <li>컨텐츠 안에서 직접 출력하기 = [[${data}]]</li>
+</ul>
+</body>
+</html>
