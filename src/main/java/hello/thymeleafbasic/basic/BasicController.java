@@ -130,11 +130,6 @@ public class BasicController {
         return "basic/javascript";
     }
 
-    @GetMapping("/layout")
-    public String layout() {
-        return "template/layout/layoutMain";
-    }
-
     @Controller
     @RequestMapping("/template")
     public class TemplateController {
@@ -142,6 +137,11 @@ public class BasicController {
         @GetMapping("/fragment")
         public String template() {
             return "template/fragment/fragmentMain";
+        }
+
+        @GetMapping("/layout")
+        public String layout() {
+            return "template/layout/layoutMain";
         }
     }
 
